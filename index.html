@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Route-specific tags between these markers are written per page by seo/vite-plugin-seo.ts (build)
+         and kept up to date by src/seo/usePageMeta.ts (runtime). -->
+    <!--seo:start-->
+    <title>CareFlow — Trusted home nursing and care, right at home</title>
+    <meta name="description" content="Book verified home care nurses for elderly care, post-surgery recovery, wound care and daily support. Clear daily rates, booking and payment status in one place." />
+    <!--seo:end-->
+    <meta name="theme-color" content="#0F766E" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      /* Initial loader: visible only until React's first render replaces #root's content. */
+      .boot { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #fafaf7; }
+      .boot-mark { width: 44px; height: 44px; border-radius: 13px; background: #0f766e; display: flex; align-items: center; justify-content: center; animation: boot-pulse 1.4s ease-in-out infinite; }
+      @keyframes boot-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(0.94); } }
+      @media (prefers-reduced-motion: reduce) { .boot-mark { animation: none; } }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="boot" role="status" aria-label="Loading CareFlow">
+        <div class="boot-mark">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M4 12.5 12 5l8 7.5" fill="none" stroke="#DDF5EC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.5 15.5c1.2 1.9 2.7 2.9 4.5 2.9s3.3-1 4.5-2.9" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <noscript>
+      <p style="font-family: system-ui, sans-serif; text-align: center; padding: 24px">
+        CareFlow needs JavaScript to book care. Please enable it, or contact us for help.
+      </p>
+    </noscript>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+/* Fonts are self-hosted (src/fonts.ts): same families/weights as the design, no third-party render-blocking CSS. */
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fafaf7;
+  color: #172b2a;
+  font-family: 'Manrope Variable', 'Manrope', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html[dir='rtl'] body {
+  font-family: 'IBM Plex Sans Arabic', 'Manrope Variable', 'Manrope', system-ui, sans-serif;
+}
+/* Arabic headings use Plex Arabic with tighter leading tuned for the script */
+html[dir='rtl'] .font-display {
+  font-family: 'IBM Plex Sans Arabic', 'Newsreader Variable', 'Newsreader', serif;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
